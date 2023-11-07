@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test Website</title>
+        <link rel="stylesheet" href="./index.css">
+        <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li id="name_logo" onclick="newStyle();">Kobey</li>
+                <li></li>
+                <li><a class="blue" href="about_me.html">About Me</a></li>
+                <li><a class="blue" href="projects.html">Projects</a></li>
+                <li><a class="blue" href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+        <div id="welcome" class="banner">
+            <h1 id="welcome_text"></h1> <!--Will say 'Hello everyone! Welcome to my website!' with JS when page loads-->
+            <img id="prof_pic" src="./pictures/profile_pic.JPG">
+        </div>
+        <div>
+            <p class="paragraph">
+                I love programming, and want to share a few of the projects I've been working on (including this website itself!).
+                If you have any questions or comments about anything you see, please check out the <a class="blue" href="connect.html">Connect</a> page.
+            </p>
+        </div>
+        <div id="game-container"></div>
+
+        <script src="./test.js"></script>
+        <script src="./phaser.js"></script>
+        
+    </body>
+</html>
+
+<!-- Here is the file path for this html file: /Users/Kobey/Documents/Coding/Misc_Projects/web_dev/test_website/index.html
+    Paste this into a browser in place of a URL to view the page-->
+
+<!-- To publish site: go to github repository > settings > pages
+    Then select 'main branch' and save, wait a few minutes, then refresh to access the URL -->
+
+<!-- To display using MAMP (browser local host): go to finder > MAMP, 
+    make sure root is linked to this file, click start, go to chrome and type 'http://localhost:8888/',
+    **make sure to click stop in MAMP at the end of session-->

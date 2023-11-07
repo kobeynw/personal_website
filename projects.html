@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test Website</title>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a class="blue" href="index.html">Kobey</a></li>
+                <li></li>
+                <li><a class="blue" href="about_me.html">About Me</a></li>
+                <li>Projects</li>
+                <li><a class="blue" href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+        <div>
+            <div id="projects" class="subheading">Projects</div>
+            <p class="paragraph">Here are a few sample projects I've been working on...</p>
+            <ol>
+                <li><em><strong>Yahtzee</strong></em></li>
+                <li><p>A knock-off version of the classic dice-rolling game! Single player or two player supported. I am working on implementing a demo in this website, so stay tuned!</p></li>
+                <li><pre>
+-----------------------------------------------------
+|                    YAHTZEE!                       |
+|---------------------------------------------------|
+|  UPPER SECTION:   |  HOW TO SCORE:    |           |
+|                   |                   |           |
+|  ACES    ⚀ = 1    |  add aces only    |           |
+|  TWOS    ⚁ = 2    |  add twos only    |           |
+|  THREES  ⚂ = 3    |  add threes only  |           |
+|  FOURS   ⚃ = 4    |  add fours only   |           |
+|  FIVES   ⚄ = 5    |  add fives only   |           |
+|  SIXES   ⚅ = 6    |  add sixes only   |           |
+|---------------------------------------------------|
+|---------------------------------------------------|
+|  LOWER SECTION:   |                   |           |
+|                   |                   |           |
+|  3 OF A KIND      | add total of dice |           |
+|  4 OF A KIND      | add total of dice |           |
+|  FULL HOUSE       | score of 25       |           |
+|  SMALL STRAIGHT   | score of 30       |           |
+|  LARGE STRAIGHT   | score of 40       |           |
+|  YAHTZEE!         | score of 50       |           |
+|  CHANCE           | add total of dice |           |
+|  YAHTZEE BONUS    | score of 90       |           |
+|---------------------------------------------------|
+|  Total:           |       --->        |           |
+-----------------------------------------------------</pre><br></li>
+                <li data-aos="fade-up" data-aos-duration="800"><em><strong>Movie Recommendation Software</strong></em></li>
+                <li data-aos="fade-up" data-aos-duration="800"><p>Using IMDB's top 1000 movies list, I made a movie recommendation system that takes some of the stress out of choosing from so many great options on movie night!<br></p></li>
+                <li><br></li>
+                <li data-aos="fade-up" data-aos-duration="800"><em><strong>Wordle</strong></em></li>
+                <li data-aos="fade-up" data-aos-duration="800"><p>You may have heard of the simple yet engaging New York Times game, Wordle. I replicated this game in python, which pulls from a word bank of thousands of 5-letter words.<br></p></li>
+                <li><br></li>
+                <li data-aos="fade-up" data-aos-duration="800"><em><strong>Personal Website</strong></em></li>
+                <li data-aos="fade-up" data-aos-duration="800"><p>While web design is not my strongest skill set when it comes to programming, I went outside of my comfort zone to build this very website from scratch using html, css, and javascript!<br></p></li>
+                <li><br></li>
+                <li><br></li>
+                <li><em>Check out my Github page to view the code itself!</em></li>
+            </ol>
+        </div>
+
+        <script src="./test.js"></script> <!-- This script element for javascript code must come after the other body elements-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    </body>
+</html>

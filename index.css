@@ -1,0 +1,164 @@
+/* Global variables to be used for the color palette*/
+:root {
+    --body: white;
+    --navbar-background: #FCAB55;
+    --navbar-a: #023B47;
+    --banner-background: #4F5D75;
+    --banner-text: #F2E085;
+    --pic-border: #EE7F38;
+    --subheading: #295E52;
+    --a-hover: blue;
+}
+
+
+body {
+    font-family: Inconsolata, monospace;
+    margin: 0px;
+}
+
+/* This uses a class, which can be used multiple times */
+.navbar {
+    background-color: var(--navbar-background);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--navbar-a);
+}
+
+a:hover {
+    color: var(--a-hover);
+}
+
+.banner {
+    width: 100%;
+    background-color: var(--banner-background);
+    color: var(--banner-text);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* This uses an id, which can only be used once*/
+#prof_pic {
+    width: 450px;
+    height: 300px;
+}
+
+#coup_pic {
+    width: 400px;
+    height: 350px;
+    margin-top: 30px;
+    margin-left: 5%;
+    border: 5px solid var(--pic-border);
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+#biking_pic {
+    width: 400px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 5%;
+    border: 5px solid var(--pic-border);
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* start the opacity at 0, then with JS, ease into 1*/
+    transition: opacity 0.75s ease-in-out;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    padding-right: 5px;
+}
+
+.subheading {
+    color: var(--subheading);
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 75px;
+    margin-left: 3%;
+    border-bottom: 2px solid var(--subheading);
+    border-radius: 2px;
+}
+
+.paragraph {
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    flex: 45%;
+    padding: 10px;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+}
+
+.slide-container {
+    overflow: hidden; /* Hides content that overflows */
+}
+  
+.slide-element {
+    transform: translateX(-100%); /* Initial position off the screen to the left */
+    transition: transform 0.75s ease; /* Transition property for smooth animation */
+}
+
+#game-container {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    padding-top: 20px;
+}
+
+/* #feedback_note {
+    max-width: 270px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: yellow;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: yellow;
+}
+
+button {
+    background-color: lightgray;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--a-hover);
+} */
