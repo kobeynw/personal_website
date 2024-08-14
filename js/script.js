@@ -51,7 +51,39 @@ async function typeText() {
     }
 }
 
+// FADE IN EFFECT
+
+const fadeInElements = document.getElementsByClassName('fade-in');
+
+async function fadeIn() {
+    await new Promise(resolve => setTimeout(resolve, 500));
+    fadeInElements[0].style.opacity = 1;
+    await new Promise(resolve => setTimeout(resolve, 500));
+    fadeInElements[1].style.opacity = 1;
+    await new Promise(resolve => setTimeout(resolve, 500));
+    fadeInElements[2].style.opacity = 1;
+}
+
+function onScrollTrigger() {
+    fadeIn();
+    window.removeEventListener('scroll', handleScroll);
+}
+
+function handleScroll() {
+    const targetElement = document.getElementById('trigger-element');
+    const offset = 680;
+    const triggerPoint = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+
+    console.log(triggerPoint);
+    console.log(window.scrollY);
+    if (window.scrollY >= triggerPoint) {
+        onScrollTrigger();
+    }
+}
+
 // MAIN FUNCTION CALLS
+
+window.addEventListener('scroll', handleScroll);
 
 document.addEventListener('DOMContentLoaded', () => {
     titlesSlider();

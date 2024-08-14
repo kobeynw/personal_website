@@ -19,61 +19,107 @@
     </div>
     <div id="about">
         <h2>My Story</h2>
-        <div class="grid-container" data-aos="fade-up" data-aos-duration="800">
+        <div class="grid-container" data-aos="fade-up" data-aos-duration="800" style="padding-bottom: 50px;">
             <p>I grew up in rural Nevada in a town called Dayton, where I graduated high school and 
                 earned my Associate’s Degree. After a two year proselytizing church mission to Ecuador 
                 and Virginia, I began studying at Brigham Young University. I am currently majoring in 
                 Computer Science and minoring in Mathematics.</p>
-            <img src="./pictures/profile.jpeg" class="profile-pic" width="400px">
+            <img src="./pictures/profile.jpeg" class="profile-pic" width="100%">
         </div>
-        <div class="grid-container" data-aos="fade-up" data-aos-duration="800">
-            <img src="./pictures/couple.jpeg" class="profile-pic" width="400px">
+        <div class="grid-container" data-aos="fade-up" data-aos-duration="800" style="padding-bottom: 50px;">
+            <img src="./pictures/couple.jpeg" class="profile-pic"  width="100%">
             <p>While at BYU, I met my wife, Kelsie. We recently had a beautiful baby boy named Oliver. 
                 I am proud to be a husband and father. Everything I do is for my family.</p>
         </div>
-        <div class="grid-container" data-aos="fade-up" data-aos-duration="800">
+        <div class="grid-container" data-aos="fade-up" data-aos-duration="800" style="padding-bottom: 50px;">
             <p>I have a passion for coding and tinkering, and have always loved making games, from board 
                 games to computer games. I also enjoy getting outside by going mountain biking, hiking, 
                 and running. I ran the St. George Marathon in October of 2022, and have run several smaller 
                 races as well.
             </p>
-            <img src="./pictures/biking.jpeg" class="profile-pic" width="400px">
+            <img src="./pictures/biking.jpeg" class="profile-pic"  width="100%">
         </div>
     </div>
     <div id="projects">
         <h2>Projects</h2>
         <div class="project" data-aos="fade-up" data-aos-duration="800">
-            <div class="grid-container">
-                <img src="./pictures/daze_town_logo.png" width="400px">
-                <a href="https://kobeynw.github.io/game_website/" target="_blank"><img src="./pictures/daze_town_character.jpeg" class="profile-pic" width="400px"></a>
+            <div class="grid-container" style="margin-bottom: -100px;">
+                <img src="./pictures/daze_town_logo.png"  width="100%">
+                <a href="https://kobeynw.github.io/game_website/" target="_blank"><video src="./pictures/daze_town.mov" loop autoplay muted class="profile-pic"  width="100%">Your browser does not support this video file.</video></a>
             </div>
             <div class="project-description">
-                <p id="first">A 2D platformer game made with the Unity game engine. The game is currently still in development, 
+                <p id="first">A desert-themed 2D platformer game made with the <b><a href="https://unity.com/" target="_blank" style="color: gray; text-decoration: none;">Unity</a></b> game engine. The game is currently still in development, 
                     but in the mean time you can check out the Daze Town website, which has a free demo included.</p>
-                <img id="second" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" width="100px"/>
+                <ul class="bottom" id="second">
+                    <li>
+                        <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" width="60px"/></a>
+                    </li>
+                    <li>
+                        <a href="https://html.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="60px"/></a>
+                    </li>
+                </ul>
+                <ul class="bottom" id="third">
+                    <li>
+                        <a href="https://css3.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="60px"/></a>
+                    </li>
+                    <li>
+                        <a href="https://www.javascript.com/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="60px"/></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project" data-aos="fade-up" data-aos-duration="800">
+            <div class="grid-container" style="margin-bottom: -100px;">
+                <h1 style="font-size: 70px; color: white; text-align: left;">College Attendance Analysis</h1>
+                <a href="https://github.com/kobeynw/College_Attendance_Analysis" target="_blank"><img src="./pictures/analysis_plot.png" class="profile-pic"  width="100%"></a>
+            </div>
+            <div class="project-description">
+                <p id="first">Descriptive and inferential statistical analysis of the relationship between parent income and the likelihood of 
+                    a child attending college. Dataset used: Statistics By Parent or Child Income Percentile. Statistical Analysis Report 
+                    included in the Github repository.</p>
+                <ul class="bottom" id="second">
+                    <li>
+                        <a href="https://www.python.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="60px"/></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="project" data-aos="fade-up" data-aos-duration="800">
+            <div class="grid-container" style="margin-bottom: -100px;">
+                <h1 style="font-size: 70px; color: white; text-align: left;">Meal Planner App</h1>
+                <video src="./pictures/meal_planner.mov" loop autoplay muted class="profile-pic"  width="100%">Your browser does not support this video file.</video>
+            </div>
+            <div class="project-description">
+                <p id="first">A personal dinner planning application. The user can input their recipes and current pantry ingredients
+                     inventory, and the app will show which meals the user can make most easily with the ingredients they have. Then the user 
+                     can plan out which recipe to do on a certain day of the week, or select a random day/recipe if they don't have a preference.
+                </p>
+                <ul class="bottom" id="second">
+                    <li>
+                        <a href="https://www.python.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="60px"/></a>
+                    </li>
+                    <li>
+                        <a href="https://www.postgresql.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" width="60px"/></a>
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" width="100px"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" width="100px"/>
+        <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" width="100px"/>
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" width="100px"/> -->
-          
 
     </div>
     <div id="bottom-block">
-        <ul class="bottom">
+        <h2>Connect with Me</h2>
+        <ul id="trigger-element" class="bottom">
             <li>
-                <a href="mailto:kobeyworkman1@gmail.com"><img src="./pictures/email_icon.png" width="60px"></a>
+                <a href="mailto:kobeyworkman1@gmail.com"><img class="fade-in" src="./pictures/email_icon.png" width="60px"></a>
             </li>
             <li>
-                <a href="https://github.com/kobeynw" target="_blank"><img src="./pictures/github_icon.png" width="60px"></a>
+                <a href="https://github.com/kobeynw" target="_blank"><img class="fade-in" src="./pictures/github_icon.png" width="60px"></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/kobey-workman/" target="_blank"><img src="./pictures/linkedin_icon.png" width="60px"></a>
+                <a href="https://www.linkedin.com/in/kobey-workman/" target="_blank"><img class="fade-in" src="./pictures/linkedin_icon.png" width="60px"></a>
             </li>
         </ul>
         <h4>Kobey Workman | Software Engineer</h4>

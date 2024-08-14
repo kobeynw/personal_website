@@ -50,6 +50,11 @@ p {
 
 /* GENERAL CLASSES AND IDS */
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
 .profile-pic {
     border: 7px solid var(--border);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
@@ -60,15 +65,12 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(350px, 5fr));
     align-items: center;
     gap: 10%;
-    padding-bottom: 50px;
 }
 
 .project-description {
     display: grid;
-    grid-template-areas: 'first first first first second';
+    grid-template-areas: 'first first first first first first second third';
     align-items: center;
-    gap: 10%;
-    padding-bottom: 200px;
 }
 
 .project div a:hover {
@@ -77,11 +79,22 @@ p {
 }
 
 #first {
+    height: 150px;
     grid-area: first;
+    grid-template-columns: repeat(auto);
 }
 
 #second {
+    height: 150px;
     grid-area: second;
+    margin-top: 150px;
+    margin-right: -50px;
+}
+
+#third {
+    height: 150px;
+    margin-top: 150px;
+    grid-area: third;
 }
 
 #greeting {
@@ -116,12 +129,12 @@ p {
     padding-top: 50px;
     padding-left: 15%;
     padding-right: 15%;
-    padding-bottom: 50px;
 }
 
 /* BOTTOM BLOCK */
 
 #bottom-block {
+    text-align: center;
     padding-bottom: 50px;
 }
 
@@ -130,6 +143,7 @@ p {
     color: var(--text);
     text-align: center;
     list-style-type: none;
+    padding-bottom: 100px;
 }
 
 .bottom li {
@@ -147,4 +161,43 @@ p {
 .bottom li img:hover {
     transform: scale(1.15, 1.15);
     transition: all 0.35s ease-in-out;
+}
+
+/* STYLE FOR SMALL SCREEN WIDTH */
+
+@media (max-width: 1111px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 5fr));
+        align-items: center;
+        gap: 10%;
+        margin-bottom: 100px;
+    }
+
+    #first {
+        height: 150px;
+        grid-area: first;
+        grid-template-columns: repeat(auto);
+        margin-top: 100px;
+    }
+    
+    #second {
+        height: 150px;
+        grid-area: second;
+        padding-top: 100px;
+        margin-right: -50px;
+    }
+    
+    #third {
+        height: 150px;
+        padding-top: 100px;
+        grid-area: third;
+    }
+
+    .project-description {
+        display: grid;
+        grid-template-areas: 'first first first first first first second third';
+        align-items: center;
+        padding-bottom: 350px;
+    }
 }
