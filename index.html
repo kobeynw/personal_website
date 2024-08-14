@@ -5,8 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <div id="navbar">
+
+    </div>
+    <div id="greeting">
+        <h1 id="welcome-text"">|</h1>
+        <div id="titles-container">
+            <!-- title slider function will add titles dynamically here -->
+        </div>
+    </div>
+    <div id="about">
+        <h2>My Story</h2>
+        <div class="grid-container" data-aos="fade-up" data-aos-duration="800">
+            <p>I grew up in rural Nevada in a town called Dayton, where I graduated high school and 
+                earned my Associate’s Degree. After a two year proselytizing church mission to Ecuador 
+                and Virginia, I began studying at Brigham Young University. I am currently majoring in 
+                Computer Science and minoring in Mathematics.</p>
+            <img src="./pictures/profile.jpeg" class="profile-pic" width="400px">
+        </div>
+        <div class="grid-container" data-aos="fade-up" data-aos-duration="800">
+            <img src="./pictures/couple.jpeg" class="profile-pic" width="400px">
+            <p>While at BYU, I met my wife, Kelsie. We recently had a beautiful baby boy named Oliver. 
+                I am proud to be a husband and father. Everything I do is for my family.</p>
+        </div>
+        <div class="grid-container" data-aos="fade-up" data-aos-duration="800">
+            <p>I have a passion for coding and tinkering, and have always loved making games, from board 
+                games to computer games. I also enjoy getting outside by going mountain biking, hiking, 
+                and running. I ran the St. George Marathon in October of 2022, and have run several smaller 
+                races as well.
+            </p>
+            <img src="./pictures/biking.jpeg" class="profile-pic" width="400px">
+        </div>
+    </div>
+    <div id="projects">
+        <h2>Projects</h2>
+        <div class="project" data-aos="fade-up" data-aos-duration="800">
+            <div class="grid-container">
+                <img src="./pictures/daze_town_logo.png" width="400px">
+                <a href="https://kobeynw.github.io/game_website/" target="_blank"><img src="./pictures/daze_town_character.jpeg" class="profile-pic" width="400px"></a>
+            </div>
+            <div class="project-description">
+                <p id="first">A 2D platformer game made with the Unity game engine. The game is currently still in development, 
+                    but in the mean time you can check out the Daze Town website, which has a free demo included.</p>
+                <img id="second" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" width="100px"/>
+            </div>
+        </div>
+
+        <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="100px"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="100px"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="100px"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="100px"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" width="100px"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" width="100px"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" width="100px"/> -->
+          
+
+    </div>
+    <div id="bottom-block">
+        <ul class="bottom">
+            <li>
+                <a href="mailto:kobeyworkman1@gmail.com"><img src="./pictures/email_icon.png" width="60px"></a>
+            </li>
+            <li>
+                <a href="https://github.com/kobeynw" target="_blank"><img src="./pictures/github_icon.png" width="60px"></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/kobey-workman/" target="_blank"><img src="./pictures/linkedin_icon.png" width="60px"></a>
+            </li>
+        </ul>
+        <h4>Kobey Workman | Software Engineer</h4>
+    </div>
+
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
