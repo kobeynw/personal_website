@@ -20,6 +20,24 @@ async function titlesSlider() {
 
 // TYPING EFFECT
 
+function wrapLetters(introText) {
+    const text = introText.textContent;
+    introText.innerHTML = "";
+
+    for (let i = 0; i < text.length; i++) {
+        const span = document.createElement("span");
+        span.className = "letter";
+        
+        if (text[i] === " ") {
+            span.innerHTML = "&nbsp;";
+        } else {
+            span.textContent = text[i];
+        }
+
+        introText.appendChild(span);
+    }
+}
+
 const textElement = document.getElementById('welcome-text');
 const text = "Hello, I'm Kobey";
 const typingSpeed = 65;
@@ -40,6 +58,9 @@ async function typeText() {
         setTimeout(typeText, typingSpeed);
     }
     else {
+        textElement.innerHTML = textElement.innerHTML.slice(0, -1);
+        wrapLetters(textElement);
+
         while (true) {
             textElement.innerHTML = textElement.innerHTML.slice(0, -1);
             textElement.innerHTML += "&nbsp";
@@ -79,6 +100,82 @@ function handleScroll() {
     if (window.scrollY >= triggerPoint) {
         onScrollTrigger();
     }
+}
+
+// SPACE INVADERS GAME
+
+document.getElementById("start-game").addEventListener("click", function() {
+    const startButton = document.getElementById("start-game");
+    startButton.style.visibility = "hidden";
+
+    const instructions = document.getElementById("instructions");
+    instructions.style.visibility = "visible";
+
+    const ship = document.getElementById("ship");
+    ship.style.display = "block";
+    ship.style.visibility = "visible";
+
+    let shipPosition = window.innerWidth / 2;
+    ship.style.left = shipPosition + "px";
+
+    document.addEventListener("keydown", function(event) {
+        if (shipPosition < 0) {
+            shipPosition = 0;
+            ship.style.left = shipPosition + "px";
+        } else if (shipPosition > window.innerWidth - 60) {
+            shipPosition = window.innerWidth - 60;
+            ship.style.left = shipPosition + "px";
+        }
+
+        if (event.key === "a" && shipPosition > 0) {
+            shipPosition -= 10;
+            ship.style.left = shipPosition + "px";
+        } else if (event.key === "d" && shipPosition < window.innerWidth - 60) {
+            shipPosition += 10;
+            ship.style.left = shipPosition + "px";
+        } else if (event.key === "w") {
+            shootBullet(shipPosition);
+        }
+    });
+});
+
+function shootBullet(position) {
+    const bullet = document.createElement("div");
+    bullet.classList.add("bullet");
+    bullet.style.left = position + 23 + "px";
+    bullet.style.bottom = "130px";
+    document.getElementById("game-container").appendChild(bullet);
+
+    const interval = setInterval(() => {
+        let bulletBottom = parseInt(bullet.style.bottom);
+        bullet.style.bottom = bulletBottom + 10 + "px";
+
+        if (bulletBottom > window.innerHeight) {
+            bullet.remove();
+            clearInterval(interval);
+        } else {
+            checkCollision(bullet);
+        }
+    }, 50);
+}
+
+function checkCollision(bullet) {
+    const letters = document.querySelectorAll("#welcome-text .letter");
+  
+    letters.forEach((letter) => {
+        const rect = letter.getBoundingClientRect();
+        const bulletRect = bullet.getBoundingClientRect();
+
+        if (
+            bulletRect.left < rect.right &&
+            bulletRect.right > rect.left &&
+            bulletRect.top < rect.bottom &&
+            bulletRect.bottom > rect.top
+        ) {
+            letter.remove();
+            bullet.remove();
+        }
+    });
 }
 
 // MAIN FUNCTION CALLS

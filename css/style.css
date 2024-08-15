@@ -102,7 +102,7 @@ p {
     margin-top: 250px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 400px;
+    margin-bottom: 230px;
     text-align: center;
 }
 
@@ -200,4 +200,83 @@ p {
         align-items: center;
         padding-bottom: 350px;
     }
+}
+
+/* SPACE INVADERS GAME */
+
+#start-game {
+    visibility: visible;
+    width: 0; 
+    height: 0; 
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-bottom: 30px solid white;
+    margin-left: 5%;
+    margin-top: -350px;
+    cursor: pointer;
+}
+
+#instructions {
+    font-size: 20px;
+    line-height: 40px;
+    visibility: hidden;
+    margin-left: 5%;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.boxed {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#start-game:hover {
+    transform: scale(1.15, 1.15);
+    transition: all 0.35s ease-in-out;
+}
+
+#game-container {
+    display: block;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+#ship {
+    visibility: hidden;
+    position: absolute;
+    margin-bottom: 100px;
+    bottom: 10px;
+    width: 0; 
+    height: 0;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    border-bottom: 30px solid white;
+}
+
+.bullet {
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    background-color: #fff;
+}
+
+#intro-text {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.letter {
+    display: inline-block;
+    position: relative;
 }
