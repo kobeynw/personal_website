@@ -20,9 +20,9 @@ async function titlesSlider() {
 
 // TYPING EFFECT
 
-function wrapLetters(introText) {
-    const text = introText.textContent;
-    introText.innerHTML = "";
+function wrapLetters(textToWrap) {
+    const text = textToWrap.textContent;
+    textToWrap.innerHTML = "";
 
     for (let i = 0; i < text.length; i++) {
         const span = document.createElement("span");
@@ -34,7 +34,7 @@ function wrapLetters(introText) {
             span.textContent = text[i];
         }
 
-        introText.appendChild(span);
+        textToWrap.appendChild(span);
     }
 }
 
@@ -95,8 +95,6 @@ function handleScroll() {
     const offset = 680;
     const triggerPoint = targetElement.getBoundingClientRect().top + window.scrollY - offset;
 
-    console.log(triggerPoint);
-    console.log(window.scrollY);
     if (window.scrollY >= triggerPoint) {
         onScrollTrigger();
     }
@@ -113,7 +111,7 @@ document.getElementById("start-game").addEventListener("click", function() {
 
     const ship = document.getElementById("ship");
     ship.style.display = "block";
-    ship.style.visibility = "visible";
+    ship.style.opacity = 1;
 
     let shipPosition = window.innerWidth / 2;
     ship.style.left = shipPosition + "px";
@@ -160,7 +158,7 @@ function shootBullet(position) {
 }
 
 function checkCollision(bullet) {
-    const letters = document.querySelectorAll("#welcome-text .letter");
+    const letters = document.querySelectorAll(".letter");
   
     letters.forEach((letter) => {
         const rect = letter.getBoundingClientRect();
@@ -178,11 +176,56 @@ function checkCollision(bullet) {
     });
 }
 
+// RANDOMIZED STAR PATTERN BACKGROUND
+
+function updateStarStyle(star) {
+    const randX = Math.floor(Math.random() * window.innerWidth);
+    const randY = Math.floor(Math.random() * window.innerHeight) - 250;
+    const randSize = Math.floor(Math.random() * 8);
+
+    star.classList.add("star");
+    star.style.position = "absolute";
+    star.style.width = randSize + "px";
+    star.style.height = randSize + "px";
+    star.style.marginLeft = randX + "px";
+    star.style.marginTop = randY + "px";
+    star.style.borderRadius = randSize / 2 + "px";
+    star.style.zIndex = -1;
+}
+
+function updateStarColor(star) {
+    const minValue = 50;
+    const maxValue = 200;
+    const randRed = Math.floor(Math.random() * 30);
+    const randGreen = Math.floor(Math.random() * 20);
+    const randBlue = Math.floor(Math.random() * 40);
+    const grayValue = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+    const grayRGB = `rgb(${grayValue + randRed}, ${grayValue + randGreen}, ${grayValue + randBlue})`;
+    star.style.backgroundColor = grayRGB;
+}
+
+function generateStars() {
+    const starContainer = document.getElementById('stars');
+    starContainer.innerHTML = "";
+
+    for (i=0; i<200; i++) {
+        const star = document.createElement('div');
+
+        updateStarStyle(star);
+        updateStarColor(star);
+
+        starContainer.appendChild(star);
+    }
+}
+
 // MAIN FUNCTION CALLS
 
 window.addEventListener('scroll', handleScroll);
 
+window.addEventListener('resize', generateStars);
+
 document.addEventListener('DOMContentLoaded', () => {
+    generateStars();
     titlesSlider();
     typeText();
 });
